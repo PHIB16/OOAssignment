@@ -1,0 +1,44 @@
+﻿1. All code that is not your own must be identified as such and attributed to its
+original author (where known). Where the majority of the code is someone
+else’s (eg provided by your tutor for you to use), this should be done by using
+comments to identify the code that is yours.
+
+2. Comments must always be separate from code – comments and code must
+never occupy the same line.
+
+3. Code files must have a header comment stating who the author(s) is/are. It is
+best practice to write this before writing any code.
+
+4. Classes (including interfaces) must have a class descriptor comment (preceded
+with “///”) that summarises the role of the class. Write this before fleshingout the class with fields, properties, and methods.
+
+5. Classes must be named using the ‘PascalCase’ case convention.
+
+6. Field (instance variable) declarations must be preceded with a comment that
+states a field is to be declared, what its type will be, and what its name will be.
+
+7. Fields should be declared private (at worst, protected).
+
+8. Field variable names must begin with an underscore, eg “_mass”, so that it can
+be differentiated from parameters and local variables.
+
+9. All variables and parameters must be named using the ‘camelCase’ case
+convention.
+
+10.Any field that needs to be publicly accessible must be accessed via a C#
+property.
+
+11.All property declarations must be preceded with a short property descriptor
+comment of the form (preceded with “///”) that summarises the property (ie
+its type, name, and meaning to the outside world).
+
+12.Properties must be named using ‘PascalCase’ case convention.
+
+13.All class methods should have a method descriptor comment (preceded with
+“///”) that summarises the method’s behaviour, and explains any parameters
+and the return value.
+
+14.Methods must be named using ‘PascalCase’ case convention.
+
+15.Each line of logic should be preceded with a comment that states the intent (ie
+what the logic is intended to do), eg “// INCREMENT mass by 1.0:”.

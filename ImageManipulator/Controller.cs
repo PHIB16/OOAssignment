@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿//Author: Bradley Phipps
+using System.Windows.Forms;
 
 namespace ImageManipulator
 {
