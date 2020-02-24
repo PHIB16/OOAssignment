@@ -9,8 +9,12 @@ namespace ImageManipulator
 {
     class Model : IModel
     {
+        private IImageStore _imageStore = new ImageStore();
+
         public Image getImage(string key, int frameWidth, int frameHeight)
         {
+
+
             throw new NotImplementedException();
         }
 

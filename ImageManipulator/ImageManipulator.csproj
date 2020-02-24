@@ -54,7 +54,10 @@
     <Compile Include="frm_Main.Designer.cs">
       <DependentUpon>frm_Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="ImageLoad.cs" />
+    <Compile Include="IImageFactory.cs" />
+    <Compile Include="IImageStore.cs" />
+    <Compile Include="ImageFactory.cs" />
+    <Compile Include="ImageStore.cs" />
     <Compile Include="IModel.cs" />
     <Compile Include="Model.cs" />
     <Compile Include="Program.cs" />

@@ -5,7 +5,7 @@ using System.Drawing;
 
 namespace ImageManipulator
 {
-    interface IModel
+    public interface IModel
     {
         /// <summary>
         /// Load the media items pointed to by 'pathfilenames' into the 'Model'
