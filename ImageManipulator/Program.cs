@@ -7,9 +7,12 @@ using System.Windows.Forms;
 
 namespace ImageManipulator
 {
+    /// <summary>
+    /// 
+    /// </summary>
     static class Program
     {
-        static Controller controller;
+        
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -18,7 +21,8 @@ namespace ImageManipulator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            controller = new Controller();
+
+            Controller controller = new Controller();
             
         }
     }

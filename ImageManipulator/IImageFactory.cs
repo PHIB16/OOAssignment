@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace ImageManipulator
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public interface IImageFactory
     {
 

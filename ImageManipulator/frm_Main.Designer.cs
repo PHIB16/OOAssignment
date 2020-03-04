@@ -78,6 +78,7 @@
             // 
             this.FD_ImagePathSelector.FileName = "Image";
             this.FD_ImagePathSelector.Filter = "Image Files|*.jpg;*.jpeg;*.png;";
+            this.FD_ImagePathSelector.Multiselect = true;
             // 
             // frm_Main
             // 

@@ -7,12 +7,18 @@ using System.Threading.Tasks;
 
 namespace ImageManipulator
 {
+    /// <summary>
+    /// 
+    /// </summary>
     class ImageStore: IImageStore
     {
+
+        //A private dictionary variable, called _ImageDict - Stores a string filepath as the key and a .net image as the value 
         private IDictionary<string, Image> _imageDict = new Dictionary<string, Image>();
 
         public ImageStore()
         {
+           
             
         }
         /// <summary>

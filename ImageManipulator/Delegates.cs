@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace ImageManipulator
 {
+    /// <summary>
+    /// 
+    /// </summary>
     class Delegates
     {
 
