@@ -1,52 +1,50 @@
 ﻿//Author: Bradley Phipps & Oliver Rooney
-
 using ImageProcessor;
-using ImageProcessor.Imaging.Formats;
-using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ImageManipulator
 {
+    /// <summary>
+    /// The implementation of IIMageProcessor, a facade for the imageprocessor library, this currently allows for the scaling of an image using imageprocessor
+    /// </summary>
     public class ImageProcessor : IImageProcessor
     {
-       
-        private MemoryStream outStream;
-        private ImageFactory imageFactory;
+        //private field of type MemoryStream, called _outStream
+        private MemoryStream _outStream;
+        //private field of type IMageFactory, called _imageFactory
+        private ImageFactory _imageFactory;
         
         /// <summary>
-        /// 
+        /// Takes an image object and then resizes it to the specified scale
         /// </summary>
-        /// <param name="pImage"></param>
-        /// <param name="pWidth"></param>
-        /// <param name="pHeight"></param>
-        /// <returns></returns>
+        /// <param name="pImage">The image object to scale</param>
+        /// <param name="pWidth">The requested width of the image</param>
+        /// <param name="pHeight">The requested height of the image</param>
+        /// <returns>The scaled .net image</returns>
         public Image ScaleImage(Image pImage, int pWidth, int pHeight)
         {
-            
-            //Image imgToReturn;
+            // Following code adapted from: https://imageprocessor.org/imageprocessor/imagefactory/
+
+            //instance variable of type Size, called size
             Size size = new Size(pWidth, pHeight);
-
-            outStream = new MemoryStream();
-
-                using (outStream)
+            //Initialise outStream as new memorystream
+            _outStream = new MemoryStream();
+            
+                using (_outStream)
                 {
                     // Initialize the ImageFactory using the overload to preserve EXIF metadata.
-                    using (imageFactory = new ImageFactory(preserveExifData: true))
+                    using (_imageFactory = new ImageFactory(preserveExifData: true))
                     {
-                        // Load, resize, set the format and quality and save an image.
-                        imageFactory.Load(pImage)
+                        // Load/ resize then save to outstream.
+                        _imageFactory.Load(pImage)
                                     .Resize(size)
-                                    .Save(outStream);
+                                    .Save(_outStream);
 
 
                     }
-                    // Do something with the stream.
-                    return Image.FromStream(outStream);
+                    //Get the image object from the outStream then return it
+                    return Image.FromStream(_outStream);
                 }
         }         
     }

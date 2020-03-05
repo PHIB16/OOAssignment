@@ -1,16 +1,11 @@
 ﻿//Author: Bradley Phipps & Oliver Rooney
 
-using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace ImageManipulator
 {
     /// <summary>
-    /// 
+    /// Implementation of IModel, this is the concrete implementation of how front ends will interact with the backend ImageManager
     /// </summary>
     public class Model  : IModel 
     {
@@ -25,8 +20,6 @@ namespace ImageManipulator
             _imageStore = pImageStore;
 
         }
-
-
         /// <summary>
         /// Return a copy of the image specified by 'key', scaled according to the dimentsions of the visual container (ie frame) it will be viewed in.
         /// </summary>

@@ -1,4 +1,4 @@
-﻿//Author: Bradley Phipps
+﻿//Author: Marc Price
 using System;
 using System.Collections.Generic;
 using System.Drawing;
