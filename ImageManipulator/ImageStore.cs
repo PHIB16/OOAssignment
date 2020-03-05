@@ -18,26 +18,25 @@ namespace ImageManipulator
 
         public ImageStore()
         {
-           
             
         }
         /// <summary>
         /// Returns Key of next index in _imageDict
         /// </summary>
         /// <returns>key string of next index</returns>
-        private string Next()
+        private Image Next()
         {
 
-            return "";
+            return null;
         }
         /// <summary>
         /// Returns key of previous index in _imageDict
         /// </summary>
         /// <returns>Key string of previous index</returns>
-        private string Previous()
+        private Image Previous()
         {
 
-            return "";
+            return null;
         }
     }
 }
