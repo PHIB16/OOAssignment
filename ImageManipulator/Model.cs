@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Author: Bradley Phipps & Oliver Rooney
+
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -12,18 +14,13 @@ namespace ImageManipulator
     /// </summary>
     public class Model  : IModel 
     {
-        //
-        private IImageFactory _imageFactory;
-
+       
+        //Private IImageStorage Variable, to be inititalised by dependency injection in the constructor
         private IImageStorage _imageStore;
 
 
-        public Model(IImageFactory pImageFactory, IImageStorage pImageStore)
+        public Model( IImageStorage pImageStore)
         {
-
-            //use for getImage, will send back an image thats the right size
-            _imageFactory = pImageFactory;
-
             //replace this with  delegates maybe for storing and loading
             _imageStore = pImageStore;
 
@@ -39,20 +36,20 @@ namespace ImageManipulator
         /// <returns>the Image pointed identified by key</returns>
         public Image getImage(string key, int frameWidth, int frameHeight)
         {
-            
-
-            return (_imageStore as IImageData).RetrieveImage(key, frameWidth, frameHeight); ;
+            //Calls the RetrieveImage method from ImageManager by polymorphing the _imageStore into and IImageData
+            return (_imageStore as IImageData).RetrieveImage(key, frameWidth, frameHeight); 
         }
         /// <summary>
         /// Load the media items pointed to by 'pathfilenames' into the 'Model'
         /// </summary>
-        /// <param name="pathfilenames">a vector of strings; each string containing path/filename for an image file to be loaded</pa+ram>
+        /// <param name="pathfilenames">a vector of strings; each string containing path/filename for an image file to be loaded</param>
         /// <returns>the unique identifiers of the images that have been loaded</returns>
         public IList<string> load(IList<string> pathfilenames)
         {
             // maybe use a delegate for the ImageStore class which we pass in the return from the imagefactory to.
             _imageStore.AddImage(pathfilenames);
 
+            //Returns the path names of the inmages so that the form can use them as keys for image requests etc
             return pathfilenames;
         }
 

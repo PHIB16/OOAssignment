@@ -14,6 +14,7 @@ namespace ImageManipulator
     {
         public Image CreateImage(String pFilePath)
         {
+            //
             return Image.FromFile(pFilePath);
         }
     }
