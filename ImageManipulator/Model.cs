@@ -15,9 +15,10 @@ namespace ImageManipulator
         //
         private IImageFactory _imageFactory;
 
-        private IImageStore _imageStore;
+        private IImageStorage _imageStore;
 
-        public Model(IImageFactory pImageFactory, IImageStore pImageStore)
+
+        public Model(IImageFactory pImageFactory, IImageStorage pImageStore)
         {
 
             //use for getImage, will send back an image thats the right size
@@ -38,21 +39,21 @@ namespace ImageManipulator
         /// <returns>the Image pointed identified by key</returns>
         public Image getImage(string key, int frameWidth, int frameHeight)
         {
+            
 
-
-            throw new NotImplementedException();
+            return (_imageStore as IImageData).RetrieveImage(key, frameWidth, frameHeight); ;
         }
         /// <summary>
         /// Load the media items pointed to by 'pathfilenames' into the 'Model'
         /// </summary>
-        /// <param name="pathfilenames">a vector of strings; each string containing path/filename for an image file to be loaded</param>
+        /// <param name="pathfilenames">a vector of strings; each string containing path/filename for an image file to be loaded</pa+ram>
         /// <returns>the unique identifiers of the images that have been loaded</returns>
         public IList<string> load(IList<string> pathfilenames)
         {
             // maybe use a delegate for the ImageStore class which we pass in the return from the imagefactory to.
+            _imageStore.AddImage(pathfilenames);
 
-
-            throw new NotImplementedException();
+            return pathfilenames;
         }
 
 

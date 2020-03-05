@@ -10,12 +10,11 @@ namespace ImageManipulator
     /// <summary>
     /// 
     /// </summary>
-    public interface IImageStore
+    public class ImgFactory : IImageFactory
     {
-        
-
-
-
-
+        public Image CreateImage(String pFilePath)
+        {
+            return Image.FromFile(pFilePath);
+        }
     }
 }

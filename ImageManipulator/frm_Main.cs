@@ -7,6 +7,9 @@ namespace ImageManipulator
 {
     public partial class frm_Main : Form
     {
+        private IList<String> _Keys = new List<String>();
+
+        private int Index = 0;
         //
         private IModel _model;
 
@@ -25,7 +28,9 @@ namespace ImageManipulator
             {
                 string[] filePaths = FD_ImagePathSelector.FileNames;
 
-                _model.load(filePaths);
+                _Keys = _model.load(filePaths);
+
+                pb_ImageDisplay.Image = _model.getImage(_Keys[Index].ToString(),pb_ImageDisplay.Width, pb_ImageDisplay.Height);
             }
             //add users selecttion to list if its a valid selection - should be in different class/ delegate?
 
@@ -34,11 +39,21 @@ namespace ImageManipulator
         private void btn_PreviousImage_Click(object sender, EventArgs e)
         {
             //Call delegate to display previous image index in dictionary 
+            if (Index != 0 )
+            {
+                pb_ImageDisplay.Image = _model.getImage(_Keys[Index -= 1], pb_ImageDisplay.Width, pb_ImageDisplay.Height);
+            }
+            
         }
 
         private void btn_NextImage_Click(object sender, EventArgs e)
         {
-            //Call delegate to display next image index in dictionary 
+            if (Index >= _Keys.Count)
+            {
+                Index = 0;
+                pb_ImageDisplay.Image = _model.getImage(_Keys[Index + 1], pb_ImageDisplay.Width, pb_ImageDisplay.Height);
+            }
+            
         }
     }
 }

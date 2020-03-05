@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ImageManipulator.Controller" Collapsed="true">
+    <Position X="1.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAgAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Controller.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ImageManipulator.Delegates" Collapsed="true">
+    <Position X="3" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Delegates.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ImageManipulator.frm_Main" Collapsed="true">
+    <Position X="4.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAACAAAAAAIgCABABCAAAAAIAABAACEAAAAAA=</HashCode>
+      <FileName>frm_Main.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ImageManipulator.ImageFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="1.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ImageFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ImageManipulator.ImageManager" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAEAAAAAAAAAAAAAAABAAAEAAAAAACAAA=</HashCode>
+      <FileName>ImageManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ImageManipulator.Model" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAABAAAAAAAAAAAgAAAAAAAAAAABA=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.692" Collapsed="true" />
+  </Class>
+  <Class Name="ImageManipulator.Program" Collapsed="true">
+    <Position X="1.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ImageManipulator.Properties.Resources" Collapsed="true">
+    <Position X="3" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ImageManipulator.Properties.Settings" Collapsed="true">
+    <Position X="4.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="ImageManipulator.IImageData" Collapsed="true">
+    <Position X="1.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAEAAAAAAAAAA=</HashCode>
+      <FileName>IImageData.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ImageManipulator.IImageFactory" Collapsed="true">
+    <Position X="3" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IImageFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ImageManipulator.IImageStorage" Collapsed="true">
+    <Position X="4.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>IImageStorage.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ImageManipulator.IImageStore" Collapsed="true">
+    <Position X="1.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IImageStore.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ImageManipulator.IModel" Collapsed="true">
+    <Position X="3" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
