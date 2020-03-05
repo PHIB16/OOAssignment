@@ -1,6 +1,8 @@
 ﻿//Author: Bradley Phipps & Oliver Rooney
+using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace ImageManipulator
 {
@@ -49,11 +51,20 @@ namespace ImageManipulator
         /// <param name="pKeys">list of filenames to be used as keys</param>
         public void AddImage(IList<string> pKeys)
         {
-            //
-            foreach (string Key in pKeys)
+            //Try catch for if the user tries to add duplicate keys
+            try
             {
-                //
-                _imageDict.Add(Key, _imageFact.CreateImage(Key));
+                foreach (string Key in pKeys)
+                {
+                
+                    _imageDict.Add(Key, _imageFact.CreateImage(Key));
+                }
+                 
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Unable to add selected images, they may already be loaded into the system");
+                System.Console.Write(e.ToString());
             }
         }
 
