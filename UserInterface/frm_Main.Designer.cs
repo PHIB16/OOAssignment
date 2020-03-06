@@ -1,4 +1,4 @@
-﻿namespace ImageManipulator
+﻿namespace UserInterface
 {
     partial class frm_Main
     {
@@ -38,38 +38,38 @@
             // 
             // pb_ImageDisplay
             // 
-            this.pb_ImageDisplay.Location = new System.Drawing.Point(2, 3);
+            this.pb_ImageDisplay.Location = new System.Drawing.Point(1, 2);
             this.pb_ImageDisplay.Name = "pb_ImageDisplay";
             this.pb_ImageDisplay.Size = new System.Drawing.Size(432, 363);
-            this.pb_ImageDisplay.TabIndex = 7;
+            this.pb_ImageDisplay.TabIndex = 11;
             this.pb_ImageDisplay.TabStop = false;
             // 
             // btn_LoadImage
             // 
-            this.btn_LoadImage.Location = new System.Drawing.Point(152, 372);
+            this.btn_LoadImage.Location = new System.Drawing.Point(151, 371);
             this.btn_LoadImage.Name = "btn_LoadImage";
             this.btn_LoadImage.Size = new System.Drawing.Size(133, 77);
-            this.btn_LoadImage.TabIndex = 6;
+            this.btn_LoadImage.TabIndex = 10;
             this.btn_LoadImage.Text = "Load Image";
             this.btn_LoadImage.UseVisualStyleBackColor = true;
             this.btn_LoadImage.Click += new System.EventHandler(this.btn_LoadImage_Click);
             // 
             // btn_NextImage
             // 
-            this.btn_NextImage.Location = new System.Drawing.Point(301, 372);
+            this.btn_NextImage.Location = new System.Drawing.Point(300, 371);
             this.btn_NextImage.Name = "btn_NextImage";
             this.btn_NextImage.Size = new System.Drawing.Size(133, 77);
-            this.btn_NextImage.TabIndex = 5;
+            this.btn_NextImage.TabIndex = 9;
             this.btn_NextImage.Text = ">";
             this.btn_NextImage.UseVisualStyleBackColor = true;
             this.btn_NextImage.Click += new System.EventHandler(this.btn_NextImage_Click);
             // 
             // btn_PreviousImage
             // 
-            this.btn_PreviousImage.Location = new System.Drawing.Point(2, 372);
+            this.btn_PreviousImage.Location = new System.Drawing.Point(1, 371);
             this.btn_PreviousImage.Name = "btn_PreviousImage";
             this.btn_PreviousImage.Size = new System.Drawing.Size(133, 77);
-            this.btn_PreviousImage.TabIndex = 4;
+            this.btn_PreviousImage.TabIndex = 8;
             this.btn_PreviousImage.Text = "<";
             this.btn_PreviousImage.UseVisualStyleBackColor = true;
             this.btn_PreviousImage.Click += new System.EventHandler(this.btn_PreviousImage_Click);
@@ -84,13 +84,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(436, 451);
+            this.ClientSize = new System.Drawing.Size(436, 450);
             this.Controls.Add(this.pb_ImageDisplay);
             this.Controls.Add(this.btn_LoadImage);
             this.Controls.Add(this.btn_NextImage);
             this.Controls.Add(this.btn_PreviousImage);
             this.Name = "frm_Main";
-            this.Text = "frm_Main";
+            this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pb_ImageDisplay)).EndInit();
             this.ResumeLayout(false);
 

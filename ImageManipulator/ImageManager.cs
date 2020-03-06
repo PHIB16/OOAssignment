@@ -9,7 +9,7 @@ namespace ImageManipulator
     /// <summary>
     /// The imageManager class is responsible for dealing with interaction with the image dictionary, such as adding images or retrieving them from it. it implements both IImageData and IImageStorage
     /// </summary>
-    class ImageManager: IImageData, IImageStorage
+    public class ImageManager: IImageData, IImageStorage
     {
 
         //A private Idictionary field, called _ImageDict - Stores a string filepath as the key and a .net image as the value 

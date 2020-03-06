@@ -1,4 +1,5 @@
 ﻿//Author: Bradley Phipps & Oliver Rooney
+using ImageManipulator;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
@@ -8,7 +9,7 @@ namespace ImageManipulator
     /// <summary>
     /// The controller class removes the responsibility of running the application from the program.cs class, this means that components can be injected where needed before the application is ran.
     /// </summary>
-    class Controller
+    public class Controller
     {
         // A private field of type IImageFactory, called _imageFactory
         private IImageFactory _imageFactory = new ImgFactory();
@@ -28,10 +29,13 @@ namespace ImageManipulator
             _imageMgr = new ImageManager(_imageDict, _imageFactory, _imageProcessor);
             //Instantiate _model, passing in the _imageMgr - dependency injection
             _model = new Model(_imageMgr);
+            
 
-            //Run the application, creating a new frm_main, passing in the _model, which is the forms access point into the backend system.
-            Application.Run(new frm_Main(_model));
+        }
 
+        public IModel GetModel()
+        {
+            return _model;
         }
             
     }
